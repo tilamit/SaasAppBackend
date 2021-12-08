@@ -1,0 +1,22 @@
+###
+GET http://localhost:5000/WeatherForecast/Get
+
+###
+GET http://localhost:5000/WeatherForecast/GetAllTeams
+request-key: 12345678910
+
+###
+GET http://localhost:5020/WeatherForecast/GetUsers
+request-key: 12345678910
+
+###
+POST http://localhost:5020/WeatherForecast/AddUser
+Content-Type: "application/json"
+
+{
+    "name": "AT",
+    "email": "at@abc.com",
+    "address": "On Earth",
+    "userType": "Paid"
+}
+
