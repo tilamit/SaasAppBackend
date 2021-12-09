@@ -14,7 +14,7 @@ Database is currently hosted in Microsoft Azure and it has elastic pool enabled.
 
 The app uses Rest Client plugin to test api. A file `rest-api.http` is provided to do the api testing, click on `Send Request` to see the response.
 
-##Further instruction
+## Further instruction
 
 If any issue arises while running the app, check the `TodoApi.csproj` file. It has the .NET core version and details of installed packages.
 
