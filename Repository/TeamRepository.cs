@@ -46,7 +46,7 @@ namespace TodoApi.Repository
 
             if (aUser.userStatus == false)
             {
-                updateCommand = "update Users set PayType = @PayType, Status = @Status where DbName = @DbName";
+                updateCommand = "update Users set DbName = @DbNameNull, PayType = @PayType, Status = @Status where DbName = @DbName";
 
                 using (var command = new SqlCommand(updateCommand))
                 {
@@ -54,6 +54,7 @@ namespace TodoApi.Repository
                     command.Parameters.AddWithValue("@PayType", aUser.userType);
                     command.Parameters.AddWithValue("@Status", 0);
                     command.Parameters.AddWithValue("@DbName", aUser.DbName);
+                    command.Parameters.AddWithValue("@DbNameNull", "");
 
                     ExecuteQuery(command);
                 }
@@ -122,7 +123,7 @@ namespace TodoApi.Repository
 
             if (val == -1)
             {
-                var createCommand = "create table Users (Id int IDENTITY(1,1) PRIMARY KEY, DbName nvarchar(100), Name nvarchar(200) NOT NULL, Status int, UserType nvarchar(10))";
+                var createCommand = "create table Users (Id int IDENTITY(1,1) PRIMARY KEY, DbName nvarchar(100), Name nvarchar(200) NOT NULL, Status int, UserType nvarchar(10), Address nvarchar(200), Email nvarchar(40))";
 
                 using (var command = new SqlCommand(createCommand))
                 {
@@ -132,7 +133,7 @@ namespace TodoApi.Repository
 
             if (valCreate == -1)
             {
-                var insertCommand = "insert into Users (DbName, Name, Status, UserType) values ('" + dbName + "', '" + aUser.Name + "', 1, '" + aUser.userType + "')";
+                var insertCommand = "insert into Users (DbName, Name, Status, UserType, Address, Email) values ('" + dbName + "', '" + aUser.Name + "', 1, '" + aUser.userType + "', '" + aUser.Address + "', '" + aUser.Email + "')";
 
                 using (var command = new SqlCommand(insertCommand))
                 {

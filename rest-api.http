@@ -1,11 +1,4 @@
 ###
-GET http://localhost:5000/WeatherForecast/Get
-
-###
-GET http://localhost:5000/WeatherForecast/GetAllTeams
-request-key: 12345678910
-
-###
 GET http://localhost:5020/WeatherForecast/GetUsers
 request-key: 12345678910
 

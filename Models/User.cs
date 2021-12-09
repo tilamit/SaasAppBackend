@@ -9,6 +9,8 @@ namespace TodoApi.Models
         public string Name { get; set; }
         public int Status { get; set; }
         public string DbName { get; set; }
+        public string Address { get; set; }
+        public string Email { get; set; }
         public string userType { get; set; }
         public bool userStatus { get; set; }
         public DateTime CreateOn { get; set; }
