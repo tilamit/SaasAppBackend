@@ -25,4 +25,4 @@ If any issue arises while running the app, check the `TodoApi.csproj` file. It h
 
 3) To verify a new user created, refresh the web page 
    
-4) To check created database in Sql Server, user this - use DbName (Auto generated database name) select * from Users; --(May not work in some cases)
+4) To check created database in Sql Server, use this - use DbName (Auto generated database name) select * from Users; --(May not work in some cases)
