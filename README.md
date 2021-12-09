@@ -8,7 +8,7 @@ Run `dotnet run` for a dev server. Navigate to `http://localhost:5020`. To make 
 
 ## Database
 
-Data is currently hosted in Microsoft Azure and it has elastic pool enabled.
+Database is currently hosted in Microsoft Azure and it has elastic pool enabled.
 
 ## Api Testing
 
